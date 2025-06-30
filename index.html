@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parivaahan - Vehicle & Transport Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h3 class="mb-0"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline-light ms-lg-3">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section d-flex align-items-center" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Digital Vehicle & Transport Services</h1>
+                    <p class="lead mb-4">Streamlined solutions for all your vehicle registration, licensing, and transport needs. Fast, secure and convenient services at your fingertips.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#services" class="btn btn-secondary btn-lg px-4">Our Services</a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4">How It Works</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="./img/hero_section1.jpg" alt="Digital interface showing vehicle registration process with forms and document upload options" class="img-fluid rounded"> </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-3 col-6">
+                    <a href="#" class="d-block text-center p-3 bg-white rounded highlight-card" style="text-decoration: none;">
+                        <i class="fas fa-id-card fs-3 text-secondary mb-2"></i>
+                        <h6 class="mb-0">DL Services</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" class="d-block text-center p-3 bg-white rounded highlight-card" style="text-decoration: none;">
+                        <i class="fas fa-car fs-3 text-secondary mb-2"></i>
+                        <h6 class="mb-0">Vehicle RC</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" class="d-block text-center p-3 bg-white rounded highlight-card" style="text-decoration: none;">
+                        <i class="fas fa-file-alt fs-3 text-secondary mb-2"></i>
+                        <h6 class="mb-0">Permits</h6>
+                    </a>
+                </div>
+                <div class="col-md-3 col-6">
+                    <a href="#" class="d-block text-center p-3 bg-white rounded highlight-card" style="text-decoration: none;">
+                        <i class="fas fa-taxi fs-3 text-secondary mb-2"></i>
+                        <h6 class="mb-0">Taxi Services</h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Services</h2>
+                <p class="text-muted">Comprehensive solutions for all your vehicle and transport needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-car-alt"></i>
+                        </div>
+                        <h4>Vehicle Registration</h4>
+                        <p class="text-muted">New registration, renewal, transfer of ownership and other RC-related services for all vehicle types.</p>
+                        <a href="#" class="text-secondary text-decoration-none">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-id-card-alt"></i>
+                        </div>
+                        <h4>Driving License</h4>
+                        <p class="text-muted">Apply for new license, renewal, duplicate, international permit, and other DL services.</p>
+                        <a href="#" class="text-secondary text-decoration-none">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <h4>Tax Payments</h4>
+                        <p class="text-muted">Pay road tax, cess, and other vehicle-related taxes with secure online payment options.</p>
+                        <a href="#" class="text-secondary text-decoration-none">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h4>Goods Carriage</h4>
+                        <p class="text-muted">Registration and permit services for commercial vehicles and transport operators.</p>
+                        <a href="#" class="text-secondary text-decoration-none">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-bus"></i>
+                        </div>
+                        <h4>Public Transport</h4>
+                        <p class="text-muted">Services related to buses, taxis, and other public transport vehicle operations.</p>
+                        <a href="#" class="text-secondary text-decoration-none">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card h-100 shadow-sm p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h4>Other Services</h4>
+                        <p class="text-muted">NOC, hypothecation termination, vehicle fitness, and other transport department services.</p>
+                        <a href="#" class="text-secondary text-decoration-none">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="./img/about us.jpg" alt="Government officials processing vehicle documents in a modern office setting" class="img-fluid rounded shadow"> </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About Parivaahan</h2>
+                    <p class="lead">A digital platform bringing transport department services to your fingertips.</p>
+                    <p>The Parivaahan initiative aims to simplify and digitize all vehicle and transport related services provided by the government. Our mission is to make these services accessible, transparent and hassle-free for citizens.</p>
+                    <div class="d-flex align-items-center mt-4 mb-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt text-secondary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="mb-0">Fast Processing</h5>
+                            <p class="text-muted mb-0">Reduced wait times with streamlined digital workflows</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt text-secondary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="mb-0">Secure Platform</h5>
+                            <p class="text-muted mb-0">Government-grade security for all your data and documents</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset text-secondary"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="mb-0">Support 24/7</h5>
+                            <p class="text-muted mb-0">Helpdesk available for all your queries and issues</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 text-white bg-primary">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="stats-item">
+                        <h3 class="display-3 fw-bold mb-0">10M+</h3>
+                        <p class="mb-0">Users</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-item">
+                        <h3 class="display-3 fw-bold mb-0">15+</h3>
+                        <p class="mb-0">Services</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-item">
+                        <h3 class="display-3 fw-bold mb-0">28</h3>
+                        <p class="mb-0">States</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stats-item">
+                        <h3 class="display-3 fw-bold mb-0">99%</h3>
+                        <p class="mb-0">Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Key Features</h2>
+                <p class="text-muted">Why choose Parivaahan for your vehicle services</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 text-center p-4 h-100">
+                        <div class="mx-auto bg-light rounded-circle p-3 mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-mobile-alt fs-3 text-secondary"></i>
+                        </div>
+                        <h5>Mobile Friendly</h5>
+                        <p class="text-muted">Access all services from your smartphone anytime, anywhere.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 text-center p-4 h-100">
+                        <div class="mx-auto bg-light rounded-circle p-3 mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-lock fs-3 text-secondary"></i>
+                        </div>
+                        <h5>Secure Documents</h5>
+                        <p class="text-muted">Your documents are safely stored with bank-level encryption.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 text-center p-4 h-100">
+                        <div class="mx-auto bg-light rounded-circle p-3 mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-clock fs-3 text-secondary"></i>
+                        </div>
+                        <h5>Save Time</h5>
+                        <p class="text-muted">Skip the queues with our online application process.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card border-0 text-center p-4 h-100">
+                        <div class="mx-auto bg-light rounded-circle p-3 mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-history fs-3 text-secondary"></i>
+                        </div>
+                        <h5>Track History</h5>
+                        <p class="text-muted">View your complete application and payment history in one place.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">How It Works</h2>
+                <p class="text-muted">Simple steps to complete your vehicle services</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm p-4 h-100 text-center">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <h3 class="mb-0">1</h3>
+                        </div>
+                        <h4>Select Service</h4>
+                        <p>Choose from our wide range of vehicle and transport related services</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm p-4 h-100 text-center">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <h3 class="mb-0">2</h3>
+                        </div>
+                        <h4>Submit Details</h4>
+                        <p>Fill the required information and upload necessary documents</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 bg-white shadow-sm p-4 h-100 text-center">
+                        <div class="bg-primary text-white rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <h3 class="mb-0">3</h3>
+                        </div>
+                        <h4>Receive Service</h4>
+                        <p>Get your documents digitally or physically as per the service requirements</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#getStartedModal">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Contact Us</h2>
+                    <p class="lead">Have questions? Get in touch with our support team.</p>
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-secondary">
+                            <i class="fas fa-map-marker-alt fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Address</h5>
+                            <p class="mb-0 text-muted">Transport Bhavan, 1 Parliament Street, New Delhi 110001</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-secondary">
+                            <i class="fas fa-phone-alt fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Call Us</h5>
+                            <p class="mb-0 text-muted">+91 11 2338 6820</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="me-3 text-secondary">
+                            <i class="fas fa-envelope fs-4"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Email Us</h5>
+                            <p class="mb-0 text-muted">support@parivaahan.gov.in</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon" style="text-decoration: none;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="text-decoration: none;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="text-decoration: none;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" style="text-decoration: none;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card shadow-sm border-0 p-4">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary px-4">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-2">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="mb-4"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+                    <p>Government's digital platform for all vehicle and transport related services. Making your experience simple, secure and seamless.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Vehicle Registration</a></li>
+                        <li class="mb-2"><a href="#">Driving License</a></li>
+                        <li class="mb-2"><a href="#">Permits</a></li>
+                        <li class="mb-2"><a href="#">Tax Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Home</a></li>
+                        <li class="mb-2"><a href="#">About</a></li>
+                        <li class="mb-2"><a href="#">Services</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for latest updates on services and policies.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-secondary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Parivaahan. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn" class="btn btn-secondary rounded-circle shadow-lg">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="modal fade" id="getStartedModal" tabindex="-1" aria-labelledby="getStartedModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="getStartedModalLabel">Get Started with Parivaahan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Thank you for your interest in Parivaahan services!</p>
+                    <p>To begin, please select a service, provide all necessary details, and receive your documents.</p>
+                    <ul>
+                        <li>**Select Service:** Choose the specific vehicle or transport service you need.</li>
+                        <li>**Enter Details:** Provide all required information and upload any necessary documents.</li>
+                        <li>**Receive Service:** Get your updated registration, license, or other documents digitally or physically.</li>
+                    </ul>
+                    <p>Our goal is to make your vehicle and transport related services simple, secure, and seamless.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#login" class="btn btn-primary">Login/Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

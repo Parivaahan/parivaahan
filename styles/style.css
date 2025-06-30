@@ -1,0 +1,125 @@
+ :root {
+            --primary: #2c3e50;
+            --secondary: #1abc9c;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+
+        .bg-secondary {
+            background-color: var(--secondary) !important;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        .text-secondary {
+            color: var(--secondary) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
+                        url('') no-repeat center center/cover; /* Replace with actual image */
+            min-height: 90vh;
+            color: white;
+        }
+
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(26, 188, 156, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .highlight-card {
+            border-left: 4px solid var(--secondary);
+            transition: all 0.3s;
+        }
+
+        .highlight-card:hover {
+            transform: translateX(5px);
+            background-color: rgba(26, 188, 156, 0.05);
+        }
+
+        .stats-item {
+            padding: 30px;
+            text-align: center;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+            transition: all 0.3s;
+            margin-right: 10px;
+        }
+
+        .social-icon:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        /* Styles for the Back to Top button */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            z-index: 1000;
+            cursor: pointer;
+            border: none;
+            padding: 0; /* Remove padding to center icon */
+            display: flex; /* Use flex to center icon */
+            align-items: center;
+            justify-content: center;
+        }
+        

@@ -161,3 +161,205 @@ footer a:hover {
     align-items: center;
     justify-content: center;
 }
+
+/* Service Card Styles */
+.service-card {
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.service-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); 
+}
+
+/* Updated Image Container and Image Sizing */
+.service-image-container {
+    width: 100%; 
+    height: 220px; 
+    background-color: #f8f9fa; 
+    border-radius: 8px 8px 0 0; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.service-image-container .service-placeholder-img,
+.service-image-container .service-generated-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;
+}
+
+.service-card .card-body {
+    padding: 1.5rem; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.service-card .card-title {
+    font-weight: 600;
+    color: var(--primary); 
+    margin-bottom: 0.5rem;
+}
+
+.service-card .text-muted.small {
+    font-size: 0.875em;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1; /
+}
+
+.service-card .btn-success {
+    background-color: var(--secondary); 
+    border-color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+/* styles for vehicle_details page */
+ body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* For footer positioning */
+    background-color: #f8f9fa; /* Light background for the page */
+        }
+main {
+    flex: 1; /* Allows main content to grow and push footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0; /* Add some padding top/bottom */
+}
+
+/* driving_license styles*/
+.instruction-card {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 80px; /* Adjust for fixed navbar */
+}
+.instruction-header {
+    background-color: #2196F3; 
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    margin: -2rem -2rem 1.5rem -2rem; /* Pull into card and extend edges */
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.list-unstyled li {
+    margin-bottom: 0.75rem;
+    font-size: 1.05rem;
+}
+.list-unstyled li strong {
+    color: #333;
+}
+.disclaimer {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1rem;
+}
+.btn-blue {
+    background-color: #2196F3; /* Custom blue for buttons */
+    color: white;
+    border: none;
+}
+.btn-blue:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+
+/* LLR styles */
+.header-band {
+    background-color: #2196F3; /* Bright blue as per screenshot */
+    color: white;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.application-card {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 20px; /* Space from the header band */
+}
+.form-section-title {
+    background-color: #E0F2F7; /* Light blue background for section titles */
+    color: #2196F3;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+.form-check-inline {
+    margin-right: 1.5rem;
+}
+.form-label-custom {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block; /* Ensure label takes full width */
+}
+.form-control-custom {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+}
+.captcha-box {
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4CAF50; /* Greenish color for captcha text */
+    min-width: 100px;
+    height: 44px; /* Match input height */
+    user-select: none; /* Prevent text selection */
+}
+.btn-action {
+    background-color: #2196F3; /* Blue button */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+}
+.btn-action:hover {
+    background-color: #1976D2;
+}
+.btn-cancel {
+    background-color: #6c757d; /* Grey button */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+}
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+.note-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 1.5rem;
+}

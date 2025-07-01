@@ -363,3 +363,275 @@ main {
     color: #6c757d;
     margin-top: 1.5rem;
 }
+/* Feature card styling */
+        .feature-card {
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            height: 100%; /* Ensure cards have equal height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+        }
+
+        .feature-icon-circle {
+            width: 4rem;
+            height: 4rem;
+            background-color: #20c997; /* Teal background for icons */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .feature-icon-circle svg {
+            color: #ffffff; /* White icon color */
+            font-size: 2.25rem;
+        }
+
+        /* New features section specific styling */
+        .new-feature-card .w-16 {
+            width: 4rem !important; /* Adjust icon size for consistency */
+            height: 4rem !important;
+        }
+        .new-feature-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%; /* Make images circular */
+            object-fit: cover; /* Ensure images fill the circle */
+        }
+        .new-feature-card .bg-blue-100 {
+            background-color: #e0f2f7; /* Light teal for new feature icons */
+        }
+        .new-feature-card .bg-blue-500 {
+            background-color: #20c997; /* Teal for bullet points */
+        }
+        .new-feature-card ul {
+            list-style: none; /* Remove default list style */
+            padding: 0;
+            text-align: left; /* Align list items to the left */
+            width: 100%;
+        }
+        .new-feature-card li {
+            display: flex;
+            align-items: center;
+        }
+        .new-feature-card li span {
+            min-width: 1rem; /* Ensure bullet point has enough space */
+            min-height: 1rem;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+        }
+
+        /* Benefits section styling */
+        .benefit-icon-circle {
+            width: 6rem;
+            height: 6rem;
+            background-color: #ffffff;
+            /* border-radius: 50%; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .benefit-icon-circle img {
+            max-width: 80%;
+            height: auto;
+        }
+
+/* login,registration,forgotpassword styles */
+body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #a7d9f7 0%, #7ec0e0 100%); /* Brighter, more inviting gradient */
+            color: #333; /* Softer dark text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 30px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .forgot-password-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .forgot-password-card {
+            max-width: 480px; /* Consistent card width */
+            width: 100%;
+            border-radius: 1.25rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+            padding: 3.5rem 2.5rem;
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes fadeInSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .instruction-message {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 0.6rem;
+        }
+
+        .form-control {
+            border-radius: 0.6rem;
+            padding: 0.85rem 1.2rem;
+            border: 1px solid #ddd;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            font-size: 1rem;
+        }
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.2);
+            background-color: #fcfdff;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #0d6efd, #007bff);
+            border: none;
+            border-radius: 0.6rem;
+            padding: 0.9rem 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0.75rem 1.5rem rgba(13, 110, 253, 0.4);
+            background: linear-gradient(45deg, #007bff, #0d6efd);
+        }
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        }
+        /* Ripple effect for button */
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(1) translate(-50%, -50%);
+            transition: all 0.5s ease-out;
+        }
+        .btn-primary:active::after {
+            transform: scale(200) translate(-50%, -50%);
+            opacity: 1;
+        }
+
+        .text-primary {
+            color: #0d6efd !important;
+            font-weight: 500;
+        }
+        .text-primary:hover {
+            text-decoration: underline !important;
+            color: #007bff !important;
+        }
+/*login styles */
+.input-group-text {
+            background-color: #f0f4f7; /* Lighter background for toggle */
+            border: 1px solid #ddd;
+            border-left: none;
+            border-top-right-radius: 0.6rem;
+            border-bottom-right-radius: 0.6rem;
+            cursor: pointer;
+            padding: 0.85rem 1rem;
+            transition: background-color 0.2s ease;
+            color: #666; /* Softer icon color */
+        }
+        .input-group-text:hover {
+            background-color: #e0e6eb;
+        }
+.welcome-message {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+.login-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem; /* Reduced padding for smaller screens */
+        }
+
+        .login-card {
+            max-width: 480px; /* Slightly wider card */
+            width: 100%;
+            border-radius: 1.25rem; /* More rounded corners for a softer look */
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); /* Deeper, softer shadow */
+            padding: 3.5rem 2.5rem; /* Generous padding */
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative; /* For inner elements */
+            overflow: hidden; /* Ensure rounded corners clip content */
+        }
+/* registration styles */
+.registration-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .registration-card {
+            max-width: 550px; /* Slightly wider for more fields */
+            width: 100%;
+            border-radius: 1.25rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+            padding: 3.5rem 2.5rem;
+            animation: fadeInSlideUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+            overflow: hidden;
+        }

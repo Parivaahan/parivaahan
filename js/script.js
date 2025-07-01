@@ -833,3 +833,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+// features actions
+ // Smooth scrolling for anchor links (Bootstrap's scrollspy might be used for nav, but this is for general links)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+// JavaScript for password visibility toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('togglePassword');
+            const password = document.getElementById('password');
+
+            if (togglePassword && password) {
+                togglePassword.addEventListener('click', function() {
+                    // Toggle the type attribute
+                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                    password.setAttribute('type', type);
+
+                    // Toggle the eye icon
+                    this.querySelector('i').classList.toggle('fa-eye');
+                    this.querySelector('i').classList.toggle('fa-eye-slash');
+                });
+            }
+        });
+// JavaScript for password visibility toggles
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('togglePassword');
+            const password = document.getElementById('password');
+            const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+            const confirmPassword = document.getElementById('confirmPassword');
+
+            function setupPasswordToggle(toggleBtn, passwordInput) {
+                if (toggleBtn && passwordInput) {
+                    toggleBtn.addEventListener('click', function() {
+                        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordInput.setAttribute('type', type);
+                        this.querySelector('i').classList.toggle('fa-eye');
+                        this.querySelector('i').classList.toggle('fa-eye-slash');
+                    });
+                }
+            }
+
+            setupPasswordToggle(togglePassword, password);
+            setupPasswordToggle(toggleConfirmPassword, confirmPassword);
+        });

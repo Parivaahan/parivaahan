@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application For Driving Licence(DL) - Parivaahan</title>
+    <meta name="keywords" content="Driving License, application, DL, learner's license, Parivaahan">
+    <meta name="description" content="Online application form for Driving Licence through Parivaahan.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./styles/style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navbar (Copied from your other pages for consistency) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <h3 class="mb-0"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./services.html">Services</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline-light ms-lg-3">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Band -->
+    <div class="header-band mt-5">
+        TRANSPORT DEPARTMENT, GOVERNMENT OF <span id="stateNameHeader">STATE NAME</span>
+    </div>
+
+    <div class="container py-4">
+        <div class="application-card">
+            <h4 class="form-section-title">Application For Driving Licence(DL)</h4>
+
+            <div class="mb-4">
+                <p class="mb-3 fw-bold">Select appropriate choice</p>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="licenceChoice" id="holdingLearnersLicence" value="learners" checked>
+                    <label class="form-check-label" for="holdingLearnersLicence">holding Learners Licence</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="licenceChoice" id="holdingForeignDL" value="foreign">
+                    <label class="form-check-label" for="holdingForeignDL">holding Foreign DL</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="licenceChoice" id="holdingDefenceLicence" value="defence">
+                    <label class="form-check-label" for="holdingDefenceLicence">holding Defence Licence</label>
+                </div>
+            </div>
+
+            <div id="learnersLicenceDetailsSection">
+                <h5 class="form-section-title">Learner's Licence Details</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="learnerLicenceNumber" class="form-label-custom">* Learner's Licence Number</label>
+                        <input type="text" class="form-control form-control-custom" id="learnerLicenceNumber">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dateOfBirth" class="form-label-custom">* Date of Birth</label>
+                        <input type="date" class="form-control form-control-custom" id="dateOfBirth">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-end mb-4">
+                    <div class="col-md-6">
+                        <label for="captchaInput" class="form-label-custom">* Captcha:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control form-control-custom" id="captchaInput" placeholder="Enter Captcha Here">
+                            <span class="input-group-text captcha-box" id="captchaText">L0XXOF</span>
+                            <button class="btn btn-outline-secondary" type="button" id="refreshCaptcha">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button type="button" class="btn btn-action" id="okButton">OK</button>
+                    <button type="button" class="btn btn-cancel" id="cancelButton">Cancel</button>
+                </div>
+                <p class="note-text text-center">
+                    If the Licence number contains space, please enter space<br>
+                    Ex: If the LL No: RJ14 /0001234/2017 enter LL number as RJ14&lt;Space&gt;/0001234/2017
+                </p>
+            </div>
+
+            <!-- Sections for Foreign DL and Defence DL (initially hidden) -->
+            <div id="foreignDLDetailsSection" style="display: none;">
+                <h5 class="form-section-title">Foreign DL Details</h5>
+                <p>Content for Foreign DL application will go here.</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button type="button" class="btn btn-action">OK</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
+                </div>
+            </div>
+
+            <div id="defenceDLDetailsSection" style="display: none;">
+                <h5 class="form-section-title">Defence DL Details</h5>
+                <p>Content for Defence DL application will go here.</p>
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <button type="button" class="btn btn-action">OK</button>
+                    <button type="button" class="btn btn-cancel">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer (Copied from your other pages for consistency) -->
+    <footer class="bg-dark text-white pt-5 pb-2">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="mb-4"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+                    <p>Government's digital platform for all vehicle and transport related services. Making your experience simple, secure and seamless.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Vehicle Registration</a></li>
+                        <li class="mb-2"><a href="#">Driving License</a></li>
+                        <li class="mb-2"><a href="#">Permits</a></li>
+                        <li class="mb-2"><a href="#">Tax Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Home</a></li>
+                        <li class="mb-2"><a href="#">About</a></li>
+                        <li class="mb-2"><a href="#">Services</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for latest updates on services and policies.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-secondary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Parivaahan. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

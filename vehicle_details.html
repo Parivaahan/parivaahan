@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Registration Details - Parivaahan</title>
+    <meta name="keywords" content="Parivaahan, vehicle services, transport, registration, license, tax, permits">
+    <meta name="description" content="Parivaahan offers comprehensive digital solutions for all your vehicle registration, licensing, tax payments, and transport needs.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./styles/style.css" rel="stylesheet">
+    
+   
+        
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <h3 class="mb-0"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./services.html">Services</a>
+                    </li>
+                    </ul>
+                <a href="#" class="btn btn-outline-light ms-lg-3">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container d-flex justify-content-center">
+            <div class="card p-4 custom-form-card">
+                <div class="card-header bg-transparent border-0 text-center pb-0">
+                    <h5 class="fw-bold text-dark pt-2">Choose option to avail Services</h5>
+                </div>
+                <div class="card-body text-center pt-3">
+                    <div class="d-flex justify-content-around mb-4">
+                        <label class="custom-radio-option">
+                            <input type="radio" name="serviceOption" id="regNoOption" value="registrationNo" checked>
+                            <div class="icon-container">
+                                <i class="fas fa-car fa-2x"></i>
+                            </div>
+                            <span class="text-dark fw-semibold mt-2">Vehicle Registration No.</span>
+                        </label>
+                        <label class="custom-radio-option">
+                            <input type="radio" name="serviceOption" id="regAuthorityOption" value="registeringAuthority">
+                            <div class="icon-container">
+                                <i class="fas fa-building fa-2x"></i>
+                            </div>
+                            <span class="text-dark fw-semibold mt-2">Registering Authority.</span>
+                        </label>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control custom-input" id="registrationNumberInput" placeholder="ENTER REGISTRATION NUMBER">
+                    </div>
+
+                    <div class="mb-4">
+                        <select class="form-select custom-input" id="rtoSelect">
+                            <label for="stateDropdown" class="form-label">Choose a State:</label>
+                                <option value="">-- Select State --</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Ladakh">Ladakh</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <select class="form-select custom-input" id="rtoSelect">
+                            <option selected disabled>-- Select RTO --</option>
+                            <option value="TS09">RTO Hyderabad (TS09)</option>
+                            <option value="TS03">RTO Warangal (TS03)</option>
+                            <option value="AP01">RTO Visakhapatnam (AP01)</option>
+                            <option value="AP02">RTO Vijayawada (AP02)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check mb-4 text-start small">
+                        <input class="form-check-input" type="checkbox" value="" id="privacyPolicyCheckbox">
+                        <label class="form-check-label" for="privacyPolicyCheckbox">
+                            I accept to have read the <a href="#" class="text-danger fw-bold text-decoration-none">Privacy Policy</a> and <a href="#" class="text-danger fw-bold text-decoration-none">Terms of Service</a> for processing of my personal data into the system
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn custom-proceed-btn w-100" id="finalProceedButton" disabled>Proceed</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-2 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="mb-4"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+                    <p>Government's digital platform for all vehicle and transport related services. Making your experience simple, secure and seamless.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Vehicle Registration</a></li>
+                        <li class="mb-2"><a href="#">Driving License</a></li>
+                        <li class="mb-2"><a href="#">Permits</a></li>
+                        <li class="mb-2"><a href="#">Tax Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Home</a></li>
+                        <li class="mb-2"><a href="#">About</a></li>
+                        <li class="mb-2"><a href="#">Services</a></li>
+                        <li class="mb-2"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for latest updates on services and policies.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-secondary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Parivaahan. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

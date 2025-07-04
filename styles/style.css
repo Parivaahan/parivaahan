@@ -444,194 +444,175 @@ main {
             max-width: 80%;
             height: auto;
         }
-
-/* login,registration,forgotpassword styles */
-body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #a7d9f7 0%, #7ec0e0 100%); /* Brighter, more inviting gradient */
-            color: #333; /* Softer dark text */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow: hidden;
-            position: relative;
+ 
+/* contact us page styles */
+        .text-indigo-800 {
+            color: #3730a3;
         }
-
-
-        @keyframes float {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(20px, 30px); }
-            100% { transform: translate(0, 0); }
+        .text-indigo-600 {
+            color: #4f46e5;
         }
-
-        .forgot-password-container {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
+        .hover-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-
-        .forgot-password-card {
-            max-width: 480px; /* Consistent card width */
-            width: 100%;
-            border-radius: 1.25rem;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-            padding: 3.5rem 2.5rem;
-            animation: fadeInSlideUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        @keyframes fadeInSlideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .instruction-message {
-            font-size: 1.15rem;
-            color: #555;
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-            line-height: 1.5;
-        }
-
-        .form-label {
-            font-weight: 500;
-            color: #444;
-            margin-bottom: 0.6rem;
-        }
-
-        .form-control {
-            border-radius: 0.6rem;
-            padding: 0.85rem 1.2rem;
-            border: 1px solid #ddd;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-            font-size: 1rem;
-        }
-        .form-control:focus {
-            border-color: #0d6efd;
-            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.2);
-            background-color: #fcfdff;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, #0d6efd, #007bff);
-            border: none;
-            border-radius: 0.6rem;
-            padding: 0.9rem 2rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
+        .transition-all-custom {
             transition: all 0.3s ease;
-            box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.3);
-            position: relative;
+        }
+        /* Custom checkbox style */
+        .form-check-input:checked {
+            background-color: #4f46e5;
+            border-color: #4f46e5;
+        }
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+        }
+        #successMessage {
+            opacity: 0;
+            height: 0;
             overflow: hidden;
-            z-index: 1;
+            transition: opacity 0.5s ease, height 0.5s ease;
         }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0.75rem 1.5rem rgba(13, 110, 253, 0.4);
-            background: linear-gradient(45deg, #007bff, #0d6efd);
+        #successMessage.show {
+            opacity: 1;
+            height: auto;
         }
-        .btn-primary:active {
-            transform: translateY(0);
-            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+
+/* login,registration,forgot password styles */
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa; /* Equivalent to bg-gray-50 */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Background */
+.header-bg {
+    background-color: #4f46e5; /* Equivalent to bg-indigo-600 */
+}
+
+/* Text Colors */
+.text-indigo-800 {
+    color: #3730a3;
+}
+.text-indigo-600 {
+    color: #4f46e5;
+}
+
+/* Custom Primary Button Styles */
+.btn-primary-custom {
+    background-color: #4f46e5; /* Custom primary button color */
+    border-color: #4f46e5;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-primary-custom:hover {
+    background-color: #4338ca; /* Darker indigo on hover */
+    border-color: #4338ca;
+}
+
+/* Form Control Focus Style */
+.form-control:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+}
+
+/* Card Max Widths (Specific to each page's main content card) */
+.card-login {
+    max-width: 450px;
+    width: 100%; /* Ensure it takes full width up to max-width */
+}
+.card-forgot-password {
+    max-width: 500px;
+    width: 100%;
+}
+.card-registration {
+    max-width: 600px;
+    width: 100%;
+}
+/* about us styles */
+:root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+            --light-text: #ecf0f1;
         }
-        /* Ripple effect for button */
-        .btn-primary::after {
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .section-title::after {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-            opacity: 0;
-            transform: scale(1) translate(-50%, -50%);
-            transition: all 0.5s ease-out;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 0;
         }
-        .btn-primary:active::after {
-            transform: scale(200) translate(-50%, -50%);
-            opacity: 1;
+        
+        .about-section, .mission-section, .vision-section {
+            padding: 80px 0;
         }
-
-        .text-primary {
-            color: #0d6efd !important;
-            font-weight: 500;
+        
+        .why-choose-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
         }
-        .text-primary:hover {
-            text-decoration: underline !important;
-            color: #007bff !important;
+        
+        .feature-card {
+            padding: 30px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-bottom: 3px solid transparent;
         }
-/*login styles */
-.input-group-text {
-            background-color: #f0f4f7; /* Lighter background for toggle */
-            border: 1px solid #ddd;
-            border-left: none;
-            border-top-right-radius: 0.6rem;
-            border-bottom-right-radius: 0.6rem;
-            cursor: pointer;
-            padding: 0.85rem 1rem;
-            transition: background-color 0.2s ease;
-            color: #666; /* Softer icon color */
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid var(--secondary-color);
         }
-        .input-group-text:hover {
-            background-color: #e0e6eb;
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
         }
-.welcome-message {
-            font-size: 1.15rem;
-            color: #555;
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-            line-height: 1.5;
+        
+        .feature-title {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
         }
-.login-container {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem; /* Reduced padding for smaller screens */
-        }
-
-        .login-card {
-            max-width: 480px; /* Slightly wider card */
-            width: 100%;
-            border-radius: 1.25rem; /* More rounded corners for a softer look */
-            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
-            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); /* Deeper, softer shadow */
-            padding: 3.5rem 2.5rem; /* Generous padding */
-            animation: fadeInSlideUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
-            position: relative; /* For inner elements */
-            overflow: hidden; /* Ensure rounded corners clip content */
-        }
-/* registration styles */
-.registration-container {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-        }
-
-        .registration-card {
-            max-width: 550px; /* Slightly wider for more fields */
-            width: 100%;
-            border-radius: 1.25rem;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-            padding: 3.5rem 2.5rem;
-            animation: fadeInSlideUp 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(20px);
+        
+        .mission-box, .vision-box {
+            padding: 40px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
+            height: 100%;
         }
+        
+        .mission-box::before, .vision-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+        

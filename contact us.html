@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Parivahan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- Navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h3 class="mb-0"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./feature.html">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./contact us.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="./login.html" class="btn btn-outline-light ms-lg-3">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section  -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-white" id="home">
+        <div id="heroCarousel" class="carousel slide carousel-fade position-absolute w-100 h-100" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner w-100 h-100">
+                <div class="carousel-item active w-100 h-100">
+                    <img src="./img/hero section 1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Slide 1">
+                </div>
+                <div class="carousel-item w-100 h-100">
+                    <img src="./img/hero section 2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Slide 2">
+                </div>
+                <div class="carousel-item w-100 h-100">
+                    <img src="./img/hero section 3.jpg" class="d-block w-100 h-150 object-fit-cover" alt="Slide 3">
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        </div>
+
+        <div class="container position-relative z-1 text-center">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="display-4 fw-bold mb-4">Digital Vehicle & Transport Services</h1>
+                    <p class="lead mb-4">Streamlined solutions for all your vehicle registration, licensing, and transport needs. Fast, secure and convenient services at your fingertips.</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="./index.html" class="btn btn-secondary btn-lg px-4">Home</a>
+                        <a href="./contact us.html" class="btn btn-outline-light btn-lg px-4">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-bg text-black py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">Contact Parivahan Services</h1>
+            <p class="lead mx-auto" style="max-width: 600px;">Have questions about vehicle registration, driving license, or other transport services? Our team is here to help.</p>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="bg-white rounded-4 shadow-lg p-4 transition-all-custom hover-shadow">
+                    <h2 class="h4 fw-bold text-indigo-800 mb-4">Send Us a Message</h2>
+                    <form id="contactForm" class="row g-3">
+                        <div class="col-12">
+                            <label for="name" class="form-label text-gray-700 fw-medium">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label text-gray-700 fw-medium">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="phone" class="form-label text-gray-700 fw-medium">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="col-12">
+                            <label for="subject" class="form-label text-gray-700 fw-medium">Subject <span class="text-danger">*</span></label>
+                            <select class="form-select" id="subject" name="subject" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="vehicle_registration">Vehicle Registration</option>
+                                <option value="driving_license">Driving License</option>
+                                <option value="rc_delivery">RC Delivery Status</option>
+                                <option value="other">Other Transport Services</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label text-gray-700 fw-medium">Your Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                                <label class="form-check-label text-gray-700" for="consent">
+                                    I agree to share my personal information for resolution of my query
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100 py-3 fw-semibold hover-bg-indigo-700 transition-all-custom">
+                                Submit Query
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="successMessage" class="mt-4 alert alert-success border-start border-success border-4 rounded-0" role="alert">
+                        <div class="d-flex align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="me-2" style="height: 20px; width: 20px;" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="mb-0">Your message has been submitted successfully! Our team will get back to you within 2 working days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 d-flex flex-column gap-4">
+                <div class="bg-white rounded-4 shadow-lg p-4 transition-all-custom hover-shadow">
+                    <h2 class="h4 fw-bold text-indigo-800 mb-4">Contact Information</h2>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="me-3 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;" class="text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fw-semibold text-gray-800">Headquarters Address</h3>
+                            <p class="text-gray-600 mb-0">Ministry of Road Transport and Highways,<br>
+                            Transport Bhawan, 1 Parliament Street,<br>
+                            New Delhi - 110001</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="me-3 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;" class="text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fw-semibold text-gray-800">Helpline Number</h3>
+                            <p class="text-gray-600 mb-0">Toll-Free: 1800-11-9999<br>
+                            (9:00 AM to 6:00 PM, Monday to Saturday)</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-start">
+                        <div class="me-3 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;" class="text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fw-semibold text-gray-800">Email Support</h3>
+                            <p class="text-gray-600 mb-0">support@parivahan.gov.in<br>
+                            grievances@parivahan.gov.in</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-4 shadow-lg p-4 transition-all-custom hover-shadow">
+                    <h2 class="h4 fw-bold text-indigo-800 mb-4">Regional Transport Offices</h2>
+                    <p class="text-gray-600 mb-4">Find contact details for your nearest Regional Transport Office (RTO):</p>
+                    <div class="input-group">
+                        <select class="form-select">
+                            <option value="" disabled selected>Select your state</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="maharashtra">Maharashtra</option>
+                            <option value="tamilnadu">Tamil Nadu</option>
+                            <option value="karnataka">Karnataka</option>
+                            <option value="westbengal">West Bengal</option>
+                            <option value="gujarat">Gujarat</option>
+                            <option value="up">Uttar Pradesh</option>
+                            <option value="rajasthan">Rajasthan</option>
+                            <option value="mp">Madhya Pradesh</option>
+                            <option value="andhrapradesh">Andhra Pradesh</option>
+                        </select>
+                        <button class="btn btn-primary mt-3 w-100 hover-bg-indigo-700 transition-all-custom">
+                            Find RTO Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-info-subtle rounded-4 p-4">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px; width: 24px;" class="text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="fw-semibold text-indigo-800">Working Hours</h3>
+                            <p class="text-gray-600 mb-0">Monday to Friday: 9:00 AM to 5:30 PM<br>
+                            Saturday: 9:00 AM to 2:00 PM<br>
+                            Closed on Sundays and Public Holidays</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="h3 fw-bold text-center text-indigo-800 mb-5">Frequently Asked Questions</h2>
+
+            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 800px;">
+                <div class="accordion-item rounded-4 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button fw-medium text-indigo-800" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How can I track my driving license application status?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-gray-600">
+                            You can track your driving license application status by visiting the Parivahan website and clicking on 'Driving License Related Services'. Enter your application number to view the current status. SMS alerts are also sent at each stage of processing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item rounded-4 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed fw-medium text-indigo-800" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            What documents are required for vehicle registration?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-gray-600">
+                            For new vehicle registration, you typically need: 1) Form 20, 2) Form 22 (roadworthiness certificate), 3) Sales certificate from dealer, 4) Valid insurance certificate, 5) Address proof, 6) PAN card copy, 7) Pollution under control certificate, and 8) Road tax payment receipt.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item rounded-4 shadow-sm mb-3">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed fw-medium text-indigo-800" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How can I renew my driving license online?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body text-gray-600">
+                            To renew your driving license online: 1) Visit the Parivahan portal, 2) Select your state and 'Driving License Related Services', 3) Click on 'Apply Online for DL Renewal', 4) Fill the application form, 5) Upload required documents, 6) Pay the renewal fees, and 7) Book a slot for necessary tests (if required).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="#" class="text-indigo-600 fw-medium text-decoration-none hover-text-indigo-800 transition-all-custom">
+                    View all FAQ's &nbsp;&rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer start -->
+    <footer class="bg-dark text-white pt-5 pb-2">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="mb-4"><i class="fas fa-car me-2"></i>PARIVAAHAN</h3>
+                    <p>Government's digital platform for all vehicle and transport related services. Making your experience simple, secure and seamless.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./services.html">Vehicle Registration</a></li>
+                        <li class="mb-2"><a href="./services.html">Driving License</a></li>
+                        <li class="mb-2"><a href="./services.html">Permits</a></li>
+                        <li class="mb-2"><a href="./services.html">Tax Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="./index.html">Home</a></li>
+                        <li class="mb-2"><a href="./about us.html">About</a></li>
+                        <li class="mb-2"><a href="./services.html">Services</a></li>
+                        <li class="mb-2"><a href="./contact us.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for latest updates on services and policies.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-secondary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Parivaahan. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eD/b+pZ/1P" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

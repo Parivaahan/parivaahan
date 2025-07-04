@@ -844,41 +844,190 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
-// JavaScript for password visibility toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const togglePassword = document.getElementById('togglePassword');
-            const password = document.getElementById('password');
+// contact us page actions
+document.addEventListener('DOMContentLoaded', function() {
+            // Form submission handling
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
 
-            if (togglePassword && password) {
-                togglePassword.addEventListener('click', function() {
-                    // Toggle the type attribute
-                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                    password.setAttribute('type', type);
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-                    // Toggle the eye icon
-                    this.querySelector('i').classList.toggle('fa-eye');
-                    this.querySelector('i').classList.toggle('fa-eye-slash');
-                });
-            }
+                // Simulate form submission
+                setTimeout(function() {
+                    contactForm.reset();
+                    successMessage.classList.add('show');
+
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                }, 1000);
+            });
         });
-// JavaScript for password visibility toggles
-        document.addEventListener('DOMContentLoaded', function() {
-            const togglePassword = document.getElementById('togglePassword');
-            const password = document.getElementById('password');
-            const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
-            const confirmPassword = document.getElementById('confirmPassword');
 
-            function setupPasswordToggle(toggleBtn, passwordInput) {
-                if (toggleBtn && passwordInput) {
-                    toggleBtn.addEventListener('click', function() {
-                        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                        passwordInput.setAttribute('type', type);
-                        this.querySelector('i').classList.toggle('fa-eye');
-                        this.querySelector('i').classList.toggle('fa-eye-slash');
-                    });
+// script.js (or main.js)
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- Common Helper Functions (if any, currently none complex enough to abstract) ---
+
+    // --- Login Form Logic ---
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) { // Check if the login form exists on the current page
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            console.log('Login Attempt - Username:', username, 'Password:', password);
+
+            // In a real application, you would send this data to a server for authentication
+            // Example using fetch API:
+            /*
+            fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username: username, password: password }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Login successful!');
+                    // Redirect to dashboard or home page
+                    // window.location.href = '/dashboard';
+                } else {
+                    alert('Login failed: ' + data.message);
                 }
+            })
+            .catch((error) => {
+                console.error('Error during login:', error);
+                alert('An error occurred during login. Please try again.');
+            });
+            */
+            alert('Login attempted for Username: ' + username + '\n(This is a frontend template, no actual login occurs.)');
+        });
+    }
+
+    // --- Forgot Password Form Logic ---
+    const forgotPasswordForm = document.getElementById('forgotPasswordForm');
+    if (forgotPasswordForm) { // Check if the forgot password form exists on the current page
+        forgotPasswordForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const emailOrUsername = document.getElementById('emailOrUsername').value;
+
+            console.log('Forgot Password Request for:', emailOrUsername);
+
+            // In a real application, you would send this data to a server
+            // to initiate the password reset process (e.g., send a reset email)
+            /*
+            fetch('/api/forgot-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ identifier: emailOrUsername }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Password reset instructions sent to ' + emailOrUsername + '!');
+                    // Optionally redirect to a confirmation page or login page
+                    // window.location.href = '/login';
+                } else {
+                    alert('Failed to send reset instructions: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error during password reset request:', error);
+                alert('An error occurred. Please try again.');
+            });
+            */
+            alert('Password reset instructions requested for: ' + emailOrUsername + '\n(This is a frontend template, no actual reset occurs.)');
+        });
+    }
+
+    // --- Registration Form Logic ---
+    const registrationForm = document.getElementById('registrationForm');
+    if (registrationForm) { // Check if the registration form exists on the current page
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirmPassword');
+        const passwordMatchError = document.getElementById('passwordMatchError'); // Assuming this element exists for feedback
+        const termsCheck = document.getElementById('termsCheck');
+
+        function validatePasswords() {
+            if (passwordField.value !== confirmPasswordField.value) {
+                confirmPasswordField.classList.add('is-invalid');
+                if (passwordMatchError) { // Ensure the error message element exists
+                    passwordMatchError.style.display = 'block';
+                }
+                return false;
+            } else {
+                confirmPasswordField.classList.remove('is-invalid');
+                if (passwordMatchError) {
+                    passwordMatchError.style.display = 'none';
+                }
+                return true;
+            }
+        }
+
+        // Real-time password matching validation as user types
+        if (passwordField && confirmPasswordField) {
+            passwordField.addEventListener('keyup', validatePasswords);
+            confirmPasswordField.addEventListener('keyup', validatePasswords);
+        }
+
+        registrationForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Validate passwords on submit
+            if (!validatePasswords()) {
+                alert('Please ensure passwords match and correct any errors.');
+                return; // Stop form submission if passwords don't match
             }
 
-            setupPasswordToggle(togglePassword, password);
-            setupPasswordToggle(toggleConfirmPassword, confirmPassword);
+            // Validate terms checkbox
+            if (termsCheck && !termsCheck.checked) {
+                alert('You must agree to the Terms and Conditions and Privacy Policy.');
+                return; // Stop form submission if terms are not accepted
+            }
+
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile') ? document.getElementById('mobile').value : ''; // Mobile might be optional or not exist
+            const password = passwordField.value; // In a real app, this would be sent securely (e.g., hashed on backend)
+
+            console.log('Registration Attempt - Full Name:', fullName, 'Email:', email, 'Mobile:', mobile, 'Password (raw for demo):', password);
+
+            // In a real application, you would send this data to a server for user registration
+            /*
+            fetch('/api/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ fullName, email, mobile, password }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Registration successful! Please login.');
+                    // Redirect to login page or a success message page
+                    // window.location.href = '/login';
+                } else {
+                    alert('Registration failed: ' + data.message);
+                }
+            })
+            .catch((error) => {
+                console.error('Error during registration:', error);
+                alert('An error occurred during registration. Please try again.');
+            });
+            */
+            alert('Registration attempted for: ' + email + '\n(This is a frontend template, no actual registration occurs.)');
         });
+    }
+});
